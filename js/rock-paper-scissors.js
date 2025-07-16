@@ -14,7 +14,7 @@ function getComputerChoice() {
     let choice = "";
 
     //console.log(randomNumber);
-    
+
     if (randomNumber == 0) {
         choice = "rock";
         return choice;
@@ -29,3 +29,21 @@ function getComputerChoice() {
     }
 }
 
+//console.log(getComputerChoice());
+
+/*
+    Create a function named getHumanChoice
+    The function will return one of the valid choices
+    "rock", "paper" or "scissors" depending on what the user inputs
+        Do not worry about invalid choices assume the user will always
+        input one of those three options
+ */
+
+function getHumanChoice() {
+    let choice = prompt("rock, paper or scissors?");
+    return choice;
+}
+
+let playerChoice = getHumanChoice();
+
+//console.log(playerChoice);
