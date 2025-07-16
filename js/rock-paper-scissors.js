@@ -44,6 +44,75 @@ function getHumanChoice() {
     return choice;
 }
 
-let playerChoice = getHumanChoice();
-
 //console.log(playerChoice);
+
+let humanScore = 0;
+let computerScore = 0;
+
+/*
+    Create a new function called playRound
+    It will have two parameters with humanChoice and computerChoice,
+        passed as arguments.
+    It will play a single round, increment the winners score and
+        logs a winner announcement
+    Make humanChoice case-insensitive so that "ROCK", "rOcK", or any other
+        variation will work
+    Have the function display a string value that looks like, "You lose! Paper beats Rock"
+
+ */
+function playRound(human, computer) {
+    human = human.toLowerCase();
+
+    if (human == "rock") {
+        if (computer == "paper") {
+            console.log(`You lose! ${computer} beats ${human}`);
+            computerScore++;
+            return;
+        }
+        else if (computer == "scissors") {
+            console.log(`You Win! ${human} beats ${computer}`);
+            humanScore++;
+            return;
+        }
+        else {
+            console.log(`Tie, Human choice: ${human} Computer choice: ${computer}`);
+            return;
+        }
+    }
+    else if (human == "paper") {
+        if (computer == "scissors") {
+            console.log(`You lose! ${computer} beats ${human}`);
+            computerScore++;
+            return;
+        }
+        else if (computer == "rock") {
+            console.log(`You Win! ${human} beats ${computer}`);
+            humanScore++;
+            return;
+        }
+        else {
+            console.log(`Tie, Human choice: ${human} Computer choice: ${computer}`);
+            return;
+        }
+    }
+    else {
+        if (computer == "rock") {
+            console.log(`You lose! ${computer} beats ${human}`);
+            computerScore++;
+            return;
+        }
+        else if (computer == "paper") {
+            console.log(`You Win! ${human} beats ${computer}`);
+            humanScore++;
+            return;
+        }
+        else {
+            console.log(`Tie, Human choice: ${human} Computer choice: ${computer}`);
+            return;
+        }
+    }
+}
+const humanChoice = getHumanChoice();
+const computerChoice = getComputerChoice();
+
+playRound(humanChoice, computerChoice);
