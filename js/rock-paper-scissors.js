@@ -10,14 +10,16 @@
 
 */
 function getComputerChoice() {
-    let randomNumber = Math.floor(Math.random() * 100);
+    let randomNumber = Math.floor(Math.random() * 100) % 3;
     let choice = "";
-    console.log(randomNumber);
-    if (randomNumber >= 0 && randomNumber <= 33) {
+
+    //console.log(randomNumber);
+    
+    if (randomNumber == 0) {
         choice = "rock";
         return choice;
     }
-    else if (randomNumber >= 34 && randomNumber <= 66) {
+    else if (randomNumber == 1) {
         choice = "paper";
         return choice;
     }
@@ -26,3 +28,4 @@ function getComputerChoice() {
         return choice;
     }
 }
+
